@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#ffcdd2</color>
+    <color name="colorPrimary">#ffaeb6</color>
+    <color name="colorAccent">#ff1744</color>
+
+    <!-- Colors used to gradient scrim -->
+    <color name="color_start_gradient">#00000000</color>
+    <color name="color_center_gradient">#20000000</color>
+    <color name="color_end_gradient">#40000000</color>
+
+    <color name="color_start_now">#66000000</color>
+    <color name="color_center_now">#40000000</color>
+    <color name="color_end_now">#99000000</color>
+
+    <color name="color_start_now_land">#99000000</color>
+    <color name="color_center_now_land">#66000000</color>
+    <color name="color_end_now_land">#40000000</color>
+
+    <!-- The gradient colors for side_nav_bar -->
+    <color name="color_start_nav">#ffaeb6</color>
+    <color name="color_center_nav">#ffaeb6</color>
+    <color name="color_end_nav">#ffaeb6</color>
+
+    <!-- Text color for the podcast title in the list item -->
+    <color name="color_pod_title_list">#66000000</color>
+
+    <!-- Selector -->
+    <color name="color_pressed">#f5f5f5</color>
+    <color name="color_focused">#f3e5f5</color>
+    <color name="color_hovered">#f3e5f5</color>
+
+    <!-- Text color -->
+    <color name="empty_podcasts">#66000000</color>
+    <color name="empty_favorites">#66000000</color>
+    <color name="empty_downloads">#66000000</color>
+    <color name="color_description">#66000000</color>
+</resources>

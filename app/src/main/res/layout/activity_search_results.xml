@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2020 Niranjan Bhoi
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.developer.kimy.ui.search.SearchResultsActivity">
+
+    <data>
+
+        <variable
+            name="isLoading"
+            type="boolean" />
+
+        <variable
+            name="isEmpty"
+            type="boolean" />
+
+        <variable
+            name="isOffline"
+            type="boolean" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_search_results"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="afterDescendants"
+            app:visibleGone="@{!isLoading}" />
+
+        <!-- A progress bar that will be shown to users to indicate that podcast data is loading -->
+        <ProgressBar
+            android:id="@+id/pb_loading_indicator"
+            android:layout_width="@dimen/size_loading"
+            android:layout_height="@dimen/size_loading"
+            android:layout_gravity="center"
+            app:visibleGone="@{isLoading}" />
+
+        <!-- Displays "No results found" text when there are no search results -->
+        <TextView
+            android:id="@+id/tv_empty_search"
+            style="@style/EmptyTextViewStyle"
+            android:drawableTop="@drawable/ic_magnifier"
+            android:drawablePadding="@dimen/margin_vertical_4"
+            android:text="@string/empty_search_results"
+            android:textColor="@color/color_description"
+            app:visibleGone="@{isEmpty}" />
+
+        <!-- Text that indicates there is no internet connectivity. Visible when offline. -->
+        <TextView
+            android:id="@+id/tv_empty_offline"
+            style="@style/EmptyTextViewStyle"
+            android:drawableTop="@drawable/ic_wifi"
+            android:text="@string/empty_offline"
+            android:visibility="gone"
+            app:visibleGone="@{isOffline}" />
+
+    </FrameLayout>
+</layout>
